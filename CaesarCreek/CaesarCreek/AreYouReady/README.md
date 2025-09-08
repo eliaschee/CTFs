@@ -1,6 +1,6 @@
 # Are You Ready? (CTF Challenge)
 
-![Challenge Screenshot](./af42f059-0d03-4bb4-916a-e641f55dfcbc.png)
+![Challenge Screenshot](./AreYouReady.png)
 
 ---
 
