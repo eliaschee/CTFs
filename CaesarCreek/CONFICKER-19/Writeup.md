@@ -1,6 +1,6 @@
 # CONFICKER-19 (Caesar Creek Software — Reverse Engineering & Forensics)
 
-![Challenge Screenshot](./conficker-19.png)
+![Challenge Screenshot](./challenge.png)
 
 ---
 
@@ -24,7 +24,9 @@ The first thing I did was look up **Conficker**. It’s a worm that exploited a 
 ---
 
 ### Step 2: Inspecting the PCAP
-I opened the provided `CONFICKER-19.pcapng` in **Wireshark**.  
+I opened the provided `CONFICKER-19.pcapng` in **Wireshark**. 
+
+![PCAP Screenshot](./wireshark_screenshot.png)
 
 - I noticed **TCP communication** between ports `1234` and `39280`.  
 - Inside one packet stream, I saw an **ELF file header** (`7f 45 4c 46 02 01 01`) and references to shared objects like `AES_Encrypt`.  
@@ -52,6 +54,9 @@ In the PCAP, I saw the sequence where:
 1. The client requested `flag.txt`  
 2. The password was set with `P` = `Prestidigitation`  
 3. The file was returned in encrypted form.
+   
+![Prestidigitation Screenshot](./prestidigitation.png)
+
 
 The final encrypted data appeared in the capture as:
 
