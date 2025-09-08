@@ -6,4 +6,5 @@ This repository contains my Capture The Flag (CTF) challenge writeups and soluti
 - [Caesar Creek Software Reverse Engineering Challenges](./CaesarCreek/README.md)
 
 ## Challenges
-- [Are You Ready?](./CaesarCreek/AreYouReady/README.md)
+- [Monoceros](./CaesarCreek/Monoceros/Writeup.md)
+- [Are You Ready?](./CaesarCreek/AreYouReady/Writeup.md)
