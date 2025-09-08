@@ -7,4 +7,5 @@ This repository contains my Capture The Flag (CTF) challenge writeups and soluti
 
 ## Challenges
 - [Monoceros](./CaesarCreek/Monoceros/Writeup.md)
+- [CONFICKER-19](./CaesarCreek/CONFICKER-19/Writeup.md)
 - [Are You Ready?](./CaesarCreek/AreYouReady/Writeup.md)
