@@ -1,6 +1,6 @@
 # Are You Ready? (CTF Challenge)
 
-![Challenge Screenshot](./AreYouReady.png)
+![Challenge Screenshot](./challenge.png)
 
 ---
 
