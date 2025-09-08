@@ -18,14 +18,14 @@
 
 ## My Process
 
-### 1: First Attempts with Unicorn
+### 1. First Attempts with Unicorn
 This challenge reminded me of **CONFICKER-19**, where I had to decompile an ELF file, find the decoding logic, and then write my own decoder.  
 
 I started by trying to run the **Unicorn emulator**, which seemed set up to emulate the captured memory `.bin` files in the `context` folder. I tried troubleshooting the harness and loader, but I couldn’t get the emulator to run correctly.
 
 ---
 
-### 2: Inspecting the Context Metadata
+### 2. Inspecting the Context Metadata
 I turned to the `context/index.json` file, which listed all the memory segments with their metadata (permissions, offsets, etc.).  
 
 One segment stood out: **`unicorn/decoder`**, which was marked as executable (`"x": true`). Its backing file was:
@@ -36,21 +36,21 @@ e671702224d928a0cea4e69da55e40c9.bin
 
 ---
 
-### 3: Decompressing the `.bin` Files
+### 3. Decompressing the `.bin` Files
 When I ran the `file` command on that `.bin`, it showed up as a **zlib-compressed file**.  
 
 To explore it further, I wrote a quick **Python script** to decompress all the `.bin` files in the context folder. This gave me access to the raw decoder binary.
 
 ---
 
-### 4: Reversing the Decoder
+### 4. Reversing the Decoder
 I opened the decompressed decoder binary in **Ghidra**.  
 
 At first, I tried copying the decompiled functions into an IDE and fixing them up so I could run the decryption logic directly. But this didn’t work well — the code was messy and obfuscated, and I ran into a lot of issues trying to patch it.
 
 ---
 
-### 5: Rewriting in Python
+### 5. Rewriting in Python
 Instead of struggling with broken C, I decided to **re-implement the logic in Python**.  
 
 To simplify things, I skipped the file input/output and just embedded the encrypted flag string directly into the script. I then translated the logic line by line, keeping variable names as close as possible to what Ghidra showed.  
@@ -59,7 +59,7 @@ I hit a few minor bugs along the way, but nothing major.
 
 ---
 
-### 6: Getting the Flag
+### 6. Getting the Flag
 After finishing the Python script, I ran it and successfully printed the decoded flag. ✅  
 
 This whole challenge took me about **four days to solve**. It was frustrating at times, but I learned a lot about:
